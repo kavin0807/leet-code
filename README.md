@@ -1,2 +1,2 @@
 # leet-code
-The 3 sum
+Leetcode and GFG
