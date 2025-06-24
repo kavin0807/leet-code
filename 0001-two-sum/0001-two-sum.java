@@ -1,13 +1,20 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         int n = nums.length;
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = i + 1; j < n; j++) {
+        int i = 0;
+        int j = i + 1;
+
+        while (i < n - 1) {
+            while (j < n) {
                 if (nums[i] + nums[j] == target) {
                     return new int[]{i, j};
                 }
+                j++;
             }
+            i++;
+            j = i + 1; // Reset j after each i
         }
-        return new int[]{}; // No solution found
+
+        return new int[]{};
     }
 }
