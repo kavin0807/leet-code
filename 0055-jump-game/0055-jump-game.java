@@ -1,12 +1,19 @@
 class Solution {
     public boolean canJump(int[] nums) {
-        if(nums.length <= 1) return true;
-        int max = nums[0]; // max posible rechable index
-        int i = 0;
-        while(i <= max){
-            max = Math.max(nums[i] + i++, max);
-            if(max >= nums.length -1) return true;
+        int n=nums.length;
+        if(nums==null || n<1 ){
+            return true;
         }
-        return false;
+      int max=0;
+      for(int i=0;i<n;i++){
+        if(i>max){
+            return false;
+        }
+        max=Math.max(max,nums[i]+i);
+         if(max>=n-1){
+        return true;
+      }
+      }
+     return false;
     }
 }
