@@ -10,7 +10,7 @@ class Solution {
             return false;
         }
         max=Math.max(max,nums[i]+i);
-         if(max>=n-1){
+         if(max>=n){
         return true;
       }
       }
